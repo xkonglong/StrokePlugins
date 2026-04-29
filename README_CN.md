@@ -21,6 +21,7 @@
 
 | 插件 | 描述 |
 |---|---|
+| [Stroke.TrayIcon](Stroke.TrayIcon) | 提供系统托盘图标，支持暂停 / 恢复手势与退出程序控制。 |
 | [Stroke.TranslateMate](Stroke.TranslateMate) | 基于剪贴板的中英文互译插件，使用百度翻译 API，并集成有道词典发音与生词本。 |
 | [Stroke.PaddleOcrMate](Stroke.PaddleOcrMate) | 基于 PaddleOCR 的图片文字识别，通过剪贴板图像或文件路径触发。 |
 
@@ -42,6 +43,8 @@
 2. 使用 `Stroke` 命名空间创建公开的静态类。
 3. 实现业务逻辑并暴露 `static` 方法供 Stroke 脚本调用。
 4. 生成的 DLL 按照 `Stroke.<PluginName>.dll` 格式命名。
+
+如果插件需要引用 Stroke 引擎中的类型，可将 Stroke 项目添加为引用。推荐在开发环境中引入 Stroke 源代码作为项目引用，以确保插件始终基于最新 Stroke 源码构建。
 
 ## 参与贡献
 

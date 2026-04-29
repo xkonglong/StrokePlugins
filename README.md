@@ -21,6 +21,7 @@ This repository hosts a set of plugins that extend Stroke’s capabilities. Each
 
 | Plugin | Description |
 |---|---|
+| [Stroke.TrayIcon](Stroke.TrayIcon) | System tray icon with pause / resume and exit controls. |
 | [Stroke.TranslateMate](Stroke.TranslateMate) | Clipboard-triggered Chinese-English translation via Baidu Translation API, with Youdao Dictionary pronunciation and vocabulary notebook. |
 | [Stroke.PaddleOcrMate](Stroke.PaddleOcrMate) | Optical character recognition (OCR) via PaddleOCR, driven by clipboard images or file paths. |
 
@@ -42,6 +43,8 @@ To create a new plugin:
 2. Use the `Stroke` namespace for your public static class.
 3. Implement your logic and expose `static` methods that Stroke scripts can call.
 4. Name your DLL using the convention `Stroke.<PluginName>.dll`.
+
+If your plugin needs to reference types from the Stroke engine, add the Stroke project as a reference. The recommended way is to include Stroke source code as a project reference in your solution, ensuring your plugin builds against the latest Stroke source.
 
 ## Contributing
 
